@@ -5,14 +5,14 @@ import useName from '../../lib/useName'
 import useGolferScores from '../../lib/useGolferScores'
 
 function GolferInfo (){
-	const router = useRouter()
-	const id = router.query.id
-	const { scores, scoresError } = useGolferScores(id)
-	const { name, nameError } = useName(id)
+  const router = useRouter()
+  const id = router.query.id
+  const { scores, scoresError } = useGolferScores(id)
+  const { name, nameError } = useName(id)
 
-	return (
+  return (
     <Layout>
-			<h1>Scores of: {name}</h1>
+      <h1>Scores of: {name}</h1>
       <>
         {nameError ? (
           nameError
@@ -32,7 +32,7 @@ function GolferInfo (){
         )}
       </>
     </Layout>
-	)
+  )
 }
 
 export default GolferInfo
